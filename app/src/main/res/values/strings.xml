@@ -1,3 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">FoodSpots</string>
+    <string name="app_logo">Application Logo</string>
+    <string name="restaurant_image">Restaurant Image</string>
+    <string name="add_restaurant">Add Restaurant</string>
+    <string name="search">Search</string>
+    <string name="location">Location</string>
+    <string name="phone">Phone</string>
+    <string name="map">Map</string>
+    <string name="course">Course</string>
+    <string name="team_member">Team Member</string>
 </resources>
