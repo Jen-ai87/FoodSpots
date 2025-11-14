@@ -78,27 +78,13 @@ public class RestaurantDetailActivity extends AppCompatActivity {
 
 
         switch (restaurantId) {
-            case 1:
-                mapPreview.setImageResource(R.drawable.map1);
-                break;
-            case 2:
-                mapPreview.setImageResource(R.drawable.map2);
-                break;
-            case 3:
-                mapPreview.setImageResource(R.drawable.map3);
-                break;
-            case 4:
-                mapPreview.setImageResource(R.drawable.map4);
-                break;
-            case 5:
-                mapPreview.setImageResource(R.drawable.map5);
-                break;
-            case 6:
-                mapPreview.setImageResource(R.drawable.map6);
-                break;
-            default:
-                mapPreview.setImageResource(R.drawable.map1);
-                break;
+            case 1: mapPreview.setImageResource(R.drawable.map1); break;
+            case 2: mapPreview.setImageResource(R.drawable.map2); break;
+            case 3: mapPreview.setImageResource(R.drawable.map3); break;
+            case 4: mapPreview.setImageResource(R.drawable.map4); break;
+            case 5: mapPreview.setImageResource(R.drawable.map5); break;
+            case 6: mapPreview.setImageResource(R.drawable.map6); break;
+            default: mapPreview.setImageResource(R.drawable.map1); break;
         }
         nameTextView.setText(restaurant.getName());
         addressTextView.setText(restaurant.getAddress());
@@ -177,5 +163,43 @@ public class RestaurantDetailActivity extends AppCompatActivity {
         Intent intent = new Intent(this, AddEditRestaurantActivity.class);
         intent.putExtra("restaurant_id", restaurant.getId());
         startActivity(intent);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadRestaurantData();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.detail_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        } else if (item.getItemId() == R.id.action_delete) {
+            RestaurantManager.getInstance().deleteRestaurant(restaurant.getId());
+            Toast.makeText(this, "Restaurant deleted", Toast.LENGTH_SHORT).show();
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    private int getTagColor(String tag) {
+        switch (tag.toLowerCase()) {
+            case "italian": return R.color.tag_italian;
+            case "japanese": return R.color.tag_japanese;
+            case "mexican": return R.color.tag_mexican;
+            case "french": return R.color.tag_french;
+            case "thai": return R.color.tag_thai;
+            case "american": return R.color.tag_american;
+            default: return R.color.tag_default;
+        }
     }
 }
