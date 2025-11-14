@@ -1,14 +1,18 @@
 package com.example.foodspots;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RatingBar;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.foodspots.data.RestaurantManager;
 import com.example.foodspots.models.Restaurant;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AddEditRestaurantActivity extends AppCompatActivity {
     private EditText nameEditText, addressEditText, phoneEditText, descriptionEditText;
@@ -26,6 +30,7 @@ public class AddEditRestaurantActivity extends AppCompatActivity {
         initializeViews();
         setupPopularTags();
         checkEditMode();
+        setupButtons();
     }
 
     private void initializeViews() {
@@ -82,5 +87,54 @@ public class AddEditRestaurantActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    private void setupButtons() {
+        saveButton.setOnClickListener(v -> saveRestaurant());
+        cancelButton.setOnClickListener(v -> finish());
+    }
+
+    private void saveRestaurant() {
+        String name = nameEditText.getText().toString().trim();
+        String address = addressEditText.getText().toString().trim();
+        String phone = phoneEditText.getText().toString().trim();
+        String description = descriptionEditText.getText().toString().trim();
+        float rating = ratingBar.getRating();
+
+        if (name.isEmpty()) {
+            Toast.makeText(this, "Please enter restaurant name", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (address.isEmpty()) {
+            Toast.makeText(this, "Please enter address", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        List<String> selectedTags = new ArrayList<>();
+        for (int i = 0; i < tagChipGroup.getChildCount(); i++) {
+            Chip chip = (Chip) tagChipGroup.getChildAt(i);
+            if (chip.isChecked()) {
+                selectedTags.add(chip.getText().toString());
+            }
+        }
+
+        if (isEditMode) {
+            editingRestaurant.setName(name);
+            editingRestaurant.setAddress(address);
+            editingRestaurant.setPhoneNumber(phone);
+            editingRestaurant.setDescription(description);
+            editingRestaurant.setRating(rating);
+            editingRestaurant.setTags(selectedTags);
+            RestaurantManager.getInstance().updateRestaurant(editingRestaurant);
+            Toast.makeText(this, "Restaurant updated", Toast.LENGTH_SHORT).show();
+        } else {
+            Restaurant newRestaurant = new Restaurant(0, name, address, phone, description,
+                    rating, selectedTags, 40.7580, -73.9855, 0);
+            RestaurantManager.getInstance().addRestaurant(newRestaurant);
+            Toast.makeText(this, "Restaurant added", Toast.LENGTH_SHORT).show();
+        }
+
+        finish();
     }
 }
