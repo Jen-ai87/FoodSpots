@@ -4,8 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-
-public class User implements Serializable {
+public class Restaurant implements Serializable {
     private int id;
     private String name;
     private String address;
@@ -63,4 +62,3 @@ public class User implements Serializable {
     public int getImageResource() { return imageResource; }
     public void setImageResource(int imageResource) { this.imageResource = imageResource; }
 }
-

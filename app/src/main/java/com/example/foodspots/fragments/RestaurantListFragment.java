@@ -8,6 +8,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -24,6 +25,7 @@ public class RestaurantListFragment extends Fragment {
     private RecyclerView recyclerView;
     private RestaurantAdapter adapter;
     private FloatingActionButton fab;
+    private ImageView searchIcon;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,9 +41,11 @@ public class RestaurantListFragment extends Fragment {
 
         recyclerView = view.findViewById(R.id.recycler_view);
         fab = view.findViewById(R.id.fab_add);
+        searchIcon = view.findViewById(R.id.search_icon);
 
         setupRecyclerView();
         setupFab();
+        setupSearchIcon();
 
         return view;
     }
@@ -56,6 +60,13 @@ public class RestaurantListFragment extends Fragment {
     private void setupFab() {
         fab.setOnClickListener(v -> {
             Intent intent = new Intent(getActivity(), AddEditRestaurantActivity.class);
+            startActivity(intent);
+        });
+    }
+
+    private void setupSearchIcon() {
+        searchIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), SearchActivity.class);
             startActivity(intent);
         });
     }
