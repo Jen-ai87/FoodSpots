@@ -9,7 +9,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.foodspots.data.RestaurantManager;
 import com.example.foodspots.models.Restaurant;
-import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 import java.util.ArrayList;
@@ -27,8 +26,6 @@ public class AddEditRestaurantActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_edit_restaurant);
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         initializeViews();
         setupPopularTags();
@@ -67,14 +64,10 @@ public class AddEditRestaurantActivity extends AppCompatActivity {
             editingRestaurant = RestaurantManager.getInstance().getRestaurantById(restaurantId);
             if (editingRestaurant != null) {
                 populateFields();
-                if (getSupportActionBar() != null) {
-                    getSupportActionBar().setTitle("Edit Restaurant");
-                }
+                setTitle("Edit Restaurant");
             }
         } else {
-            if (getSupportActionBar() != null) {
-                getSupportActionBar().setTitle("Add Restaurant");
-            }
+            setTitle("Add Restaurant");
         }
     }
 

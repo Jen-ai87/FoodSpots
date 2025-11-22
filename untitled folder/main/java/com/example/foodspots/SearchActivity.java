@@ -13,7 +13,6 @@ import com.example.foodspots.R;
 import com.example.foodspots.adapters.RestaurantAdapter;
 import com.example.foodspots.data.RestaurantManager;
 import com.example.foodspots.models.Restaurant;
-import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
 import java.util.ArrayList;
@@ -33,10 +32,9 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("Search Restaurants");
         }
 
         initializeViews();
