@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Version 1.0.0"
+            android:text="@string/version"
             android:textSize="14sp"
             android:textColor="@android:color/darker_gray" />
 
@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
-            android:text="FoodSpots is a Personal Restaurant Guide that will help users to keep track of the restaurants they visit, rate them and share using email (Facebook or Twitter)"
+            android:text="@string/app_description"
             android:textSize="14sp"
             android:textColor="@android:color/black"
             android:gravity="center"
@@ -81,7 +81,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Course Information"
+                        android:text="@string/course_information"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:textColor="@android:color/black" />
@@ -89,7 +89,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Academic Project"
+                        android:text="@string/academic_project"
                         android:textSize="12sp"
                         android:textColor="@android:color/darker_gray" />
                 </LinearLayout>
@@ -111,14 +111,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Course Code:"
+                    android:text="@string/course_code_label"
                     android:textSize="14sp"
                     android:textColor="@android:color/darker_gray" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="COMP3074"
+                    android:text="@string/course_code"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black" />
@@ -134,14 +134,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Course Name:"
+                    android:text="@string/course_name_label"
                     android:textSize="14sp"
                     android:textColor="@android:color/darker_gray" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Mobile App Development"
+                    android:text="@string/course_name"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black" />
@@ -153,7 +153,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Development Team"
+            android:text="@string/development_team"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@android:color/black" />
@@ -162,7 +162,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Meet the talented students behind this application"
+            android:text="@string/team_description"
             android:textSize="14sp"
             android:textColor="@android:color/darker_gray"
             android:gravity="center" />
@@ -193,7 +193,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Jen Henry"
+                    android:text="@string/team_member1_name"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black" />
@@ -201,7 +201,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Student ID: 101511301"
+                    android:text="@string/team_member1_id"
                     android:textSize="12sp"
                     android:textColor="@android:color/darker_gray" />
 
@@ -209,7 +209,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Lead Developer"
+                    android:text="@string/team_member1_role"
                     android:textSize="12sp"
                     android:textColor="@color/primary_purple"
                     android:textStyle="bold" />
@@ -242,7 +242,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Faraz Safdar"
+                    android:text="@string/team_member2_name"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black" />
@@ -250,7 +250,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Student ID: 100775883"
+                    android:text="@string/team_member2_id"
                     android:textSize="12sp"
                     android:textColor="@android:color/darker_gray" />
 
@@ -258,7 +258,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="UI/UX Designer &amp; QA Tester"
+                    android:text="@string/team_member2_role"
                     android:textSize="12sp"
                     android:textColor="@color/primary_purple"
                     android:textStyle="bold" />
@@ -291,7 +291,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Patrick Solamillo"
+                    android:text="@string/team_member3_name"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black" />
@@ -299,7 +299,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Student ID: 101464667"
+                    android:text="@string/team_member3_id"
                     android:textSize="12sp"
                     android:textColor="@android:color/darker_gray" />
 
@@ -307,7 +307,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
-                    android:text="Backend Developer"
+                    android:text="@string/team_member3_role"
                     android:textSize="12sp"
                     android:textColor="@color/primary_purple"
                     android:textStyle="bold" />

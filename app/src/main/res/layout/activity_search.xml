@@ -4,7 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:paddingTop="50dp"
+    android:paddingBottom="80dp">
 
     <!-- Add Toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
@@ -39,7 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:hint="Search restaurants by name..."
+            android:hint="@string/hint_search"
             android:background="@android:color/transparent"
             android:inputType="text"
             android:textSize="16sp" />
@@ -64,7 +67,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Filter by cuisine"
+                    android:text="@string/filter_by_cuisine"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black" />
@@ -84,7 +87,7 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:paddingTop="8dp"
-                android:text="12 restaurants found"
+                android:text="@string/restaurants_found"
                 android:textSize="14sp"
                 android:textColor="@android:color/darker_gray" />
 

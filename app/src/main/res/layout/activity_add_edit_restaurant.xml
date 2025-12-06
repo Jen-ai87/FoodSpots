@@ -4,7 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/white">
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true"
+    android:paddingTop="50dp"
+    android:paddingBottom="80dp">
 
     <!-- Add Toolbar -->
     <com.google.android.material.appbar.MaterialToolbar
@@ -34,7 +37,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Restaurant Name *"
+                android:text="@string/restaurant_name_label"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
@@ -44,7 +47,7 @@
                 android:id="@+id/edit_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter restaurant name"
+                android:hint="@string/hint_restaurant_name"
                 android:inputType="text"
                 android:padding="12dp"
                 android:background="@drawable/edit_text_background"
@@ -54,7 +57,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Address *"
+                android:text="@string/address_label"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
@@ -64,7 +67,7 @@
                 android:id="@+id/edit_address"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Start typing address..."
+                android:hint="@string/hint_address"
                 android:inputType="textPostalAddress"
                 android:padding="12dp"
                 android:background="@drawable/edit_text_background"
@@ -75,7 +78,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Phone Number"
+                android:text="@string/phone_number_label"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
@@ -85,7 +88,7 @@
                 android:id="@+id/edit_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="(555) 123-4567"
+                android:hint="@string/hint_phone"
                 android:inputType="phone"
                 android:padding="12dp"
                 android:background="@drawable/edit_text_background"
@@ -95,7 +98,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Description"
+                android:text="@string/description_label"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
@@ -105,7 +108,7 @@
                 android:id="@+id/edit_description"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:hint="Tell us about this restaurant..."
+                android:hint="@string/hint_description"
                 android:inputType="textMultiLine"
                 android:gravity="start|top"
                 android:padding="12dp"
@@ -116,7 +119,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Rating"
+                android:text="@string/rating_label"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
@@ -136,7 +139,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tags"
+                android:text="@string/tags_label"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
@@ -145,7 +148,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="POPULAR TAGS"
+                android:text="@string/popular_tags"
                 android:textSize="12sp"
                 android:textColor="@android:color/darker_gray"
                 android:layout_marginTop="8dp" />
@@ -169,7 +172,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Cancel"
+                    android:text="@string/cancel"
                     android:textColor="@android:color/black"
                     android:background="@drawable/button_outline"
                     android:layout_marginEnd="8dp"
@@ -180,7 +183,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Save Restaurant"
+                    android:text="@string/save_restaurant"
                     android:textColor="@android:color/white"
                     android:background="@drawable/button_primary"
                     android:layout_marginStart="8dp" />

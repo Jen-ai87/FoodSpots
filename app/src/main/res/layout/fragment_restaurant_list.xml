@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:layout_marginTop="40dp"
     android:layout_height="match_parent"
     android:background="#F5F5F5">
 
@@ -54,7 +55,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="My Restaurants"
+            android:text="@string/my_restaurants"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@android:color/black" />
@@ -63,7 +64,7 @@
             android:id="@+id/count_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="12 saved"
+            android:text="@string/saved_count"
             android:textSize="14sp"
             android:textColor="@android:color/darker_gray" />
     </LinearLayout>
